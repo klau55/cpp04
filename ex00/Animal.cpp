@@ -6,7 +6,6 @@ Animal::Animal() : type_("Animal") {
 
 Animal::Animal(const Animal& other) : type_(other.type_) {
     std::cout << "Animal copy constructor called\n";
-    *this = other;
 }
 
 Animal& Animal::operator=(const Animal& other) {
