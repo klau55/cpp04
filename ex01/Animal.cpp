@@ -6,7 +6,6 @@ Animal::Animal() : type_("Animal") {
 
 Animal::Animal(const Animal& other) : type_(other.type_) {
     std::cout << "Animal copy constructor called\n";
-    *this = other;
 }
 
 Animal& Animal::operator=(const Animal& other) {
@@ -28,5 +27,5 @@ void Animal::makeSound() const {
 }
 
 Animal::Animal(const std::string& type) : type_(type) {
-    std::cout<<"Animal assignment constructor called\n";
+    std::cout << "Animal type constructor called for type: " << type << std::endl;
 }

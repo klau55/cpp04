@@ -1,3 +1,4 @@
+#pragma once
 #include "Animal.hpp"
 
 class Cat : public Animal {
@@ -6,5 +7,6 @@ class Cat : public Animal {
     Cat(const Cat& other);
     Cat& operator=(const Cat& other);
     ~Cat() override;
+
     void makeSound() const override;
 };

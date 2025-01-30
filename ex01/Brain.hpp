@@ -1,16 +1,17 @@
 #pragma once
 
+#include <iostream>
+#include <string>
+
 class Brain {
+    private:
+        std::string ideas_[100];
     public:
         Brain();
         Brain(const Brain& other);
         Brain& operator=(const Brain& other);
         ~Brain();
-    private:
-        size_t x = 0;
-        std::string ideas_[static const size_t size_ = 100];
 
-    
+        void setIdea(const std::string& idea, int index);
+        std::string getIdea(int index) const;
 };
-
-std::ostream& operator<<(std::ostream& os, const Brain& brain);
